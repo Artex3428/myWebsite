@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/logo.png">
+    <meta name="description" content="Artex's portfolio website">
+    <title>Artex's portfolio</title>
+</head>
+<body>
+    <nav id="nav">
+        <button id="nav-toggle" aria-label="open navigation" onclick="toggleNav()">
+            <span id="hamburger"></span>
+        </button>
+        <div id="nav-img-container">
+            <img class="img" id="nav-img" src="../img/logo.png" alt="My logo">
+        </div>
+        <ul class="list" id="nav-list">
+            <li><a class="a nav-item" href=".">HOME</a></li>
+            <li><a class="a nav-item" href="https://github.com/Artex3428?tab=repositories" target="_blank">PROJECTS</a></li>
+            <li><a class="a nav-item" href="#article" onclick="scrollToSection(event, 'article', 'about-text')">ABOUT</a></li>
+            <li><a class="a nav-item" href="#footer" onclick="scrollToSection(event, 'footer', 'contact-container')">CONTACT</a></li>
+        </ul>
+        <ul class="list" id="secound-nav-list">
+            <li><a class="a btn" id="nav-sign-in-btn" href="#">SIGN IN</a></li>
+        </ul>
+    </nav>
+
+    <header id="header">
+        <div id="header-inner-container">
+            <div id="name-text-container">
+                <h1 id="name-text" class="white">Charles Alexander Linder</h1>
+                <p style="font-size: 24px;" class="yellow font-weight">Aka Artex</p>
+            </div>
+
+            <div id="selling-website-container">
+                <h2 style="font-size: 26px; margin-bottom: 5px;" class="yellow">Websites for sale!</h2>
+                <p style="font-size: 18px; margin-bottom: 5px;" class="white font-weight">I currently sell websites, it's cheep, quick and reliable.</p>
+                <a class="a btn" href="#">GO TO SITE</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="section">
+        <div class="projects-item">
+            <div>
+                <h2 style="margin-bottom: 5px;" class="yellow">Calculator</h2>
+                <p class="grey"><span class="font-weight">Made in:</span> C++</p>
+                <p class="grey"><span class="font-weight">Lines of code:</span> N/A</p>
+                <p class="grey"><span class="font-weight">Author:</span> Artex</p>
+            </div>
+            <a class="a btn btn-disabled">VIEW</a>
+        </div>
+        <div class="projects-item">
+            <div>
+                <h2 style="margin-bottom: 5px;" class="yellow">Snake-Game</h2>
+                <p class="grey"><span class="font-weight">Made in:</span> Python</p>
+                <p class="grey"><span class="font-weight">Lines of code:</span> N/A</p>
+                <p class="grey"><span class="font-weight">Author:</span> Artex</p>
+            </div>
+            <a class="a btn btn-disabled">VIEW</a>
+        </div>
+        <div class="projects-item">
+            <div>
+                <h2 style="margin-bottom: 5px;" class="yellow">Pizzeria</h2>
+                <p class="grey"><span class="font-weight">Made in:</span> HTML, CSS, JAVASCRIPT</p>
+                <p class="grey"><span class="font-weight">Lines of code:</span> N/A</p>
+                <p class="grey"><span class="font-weight">Author:</span> Artex</p>
+            </div>
+            <a class="a btn btn-disabled">VIEW</a>
+        </div>
+    </section>
+
+    <article id="article">
+        <div id="article-container">
+            <div id="about-text">
+                <h1 style="font-size: 35px; margin-bottom: 25px;">About me</h1>
+                <p style="font-size: 18px;">Hi, my name is Alexander. I'm a <span id="age"></span>-year-old from Sweden, and I created this website to give you a glimpse of who I am.</p><br>
+                <p style="font-size: 18px;">I'm a web developer, and I've been working in the field for almost 4 years. I started when I was 14, and I'm still passionate about it today. Web development is something I truly love.</p><br>
+                <p style="font-size: 18px;">Another passion of mine is C++, which I've been learning and practicing for nearly a year. However, I decided to set it aside for now to focus more on web development.</p><br>
+                <p style="font-size: 18px;">Algonside programming, I've recently started exploring soldering as a hobby. I've been working on soldering electronic DIY kits, which has been a fun and educational experience.</p>
+            </div>
+        </div>
+    </article>
+
+    <footer id="footer">
+        <div id="inner-footer-container">
+                <div style="width: 200px; padding: 15px;">
+                    <h2 class="yellow" style="margin-bottom: 5px;">Social Media</h2>
+                    <ul class="list">
+                        <li><a class="a grey font-weight footer-list-item" href="https://github.com/Artex3428" target="_blank">Github</a></li>
+                        <li><a class="a grey font-weight footer-list-item" href="https://discordapp.com/users/1089443784242241576" target="_blank">Discord</a></li>
+                        <li><a class="a grey font-weight footer-list-item" href="https://www.instagram.com/artex3428/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+    
+                <div style="width: 200px; padding: 15px;">
+                    <h2 class="yellow" style="margin-bottom: 5px;">Getting Around</h2>
+                    <ul class="list">
+                        <li><a class="a grey font-weight footer-list-item" href=".">HOME</a></li>
+                        <li><a class="a grey font-weight footer-list-item" href="https://github.com/Artex3428?tab=repositories" target="_blank">PROJECTS</a></li>
+                        <li><a class="a grey font-weight footer-list-item" href="#article" onclick="scrollToSection(event, 'article', 'about-text')">ABOUT</a></li>
+                        <li><a class="a grey font-weight footer-list-item" href="#footer" onclick="scrollToSection(event, 'footer', 'contact-container')">CONTACT</a></li>
+                    </ul>
+                </div>
+    
+                <div id="contact-container" style="width: 200px; padding: 15px;">
+                    <h2 class="yellow" style="margin-bottom: 5px;">Contact</h2>
+                    <ul class="list">
+                        <li><a class="a grey font-weight footer-list-item" href="#">Mail</a></li>
+                        <li><a class="a grey font-weight footer-list-item" href="#">Number</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="grey font-weight">Copyright © Artex <span id="date"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
