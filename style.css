@@ -57,6 +57,30 @@ body {
     list-style-type: none;
 }
 
+/* Tooltip styling */
+.tooltip::after {
+content: attr(data-tooltip);
+position: absolute;
+bottom: 150%;
+left: 50%;
+transform: translateX(-50%);
+background-color: #333;
+color: #fff;
+padding: 5px;
+border-radius: 6px;
+white-space: nowrap;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s;
+font-size: 12px;
+pointer-events: none;
+}
+
+.tooltip:hover::after {
+opacity: 1;
+visibility: visible;
+}
+
 
 
 /* Navbar */
@@ -146,7 +170,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
-    width: 900px;
+    width: 1050px;
     align-items: center;
 }
 #name-text {
